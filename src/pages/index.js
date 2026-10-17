@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const destinations = [
   {name: 'Bogotá', detail: 'Cultura, historia y altura', image: 'bogota'},
@@ -9,16 +10,19 @@ const destinations = [
 ];
 
 function Brand() {
-  return <a className={styles.brand} href="/" aria-label="VuelaData, inicio"><img className={styles.brandLogo} src="/img/vueladata-logo.png" alt="" /><span>Vuela<span>Data</span></span></a>;
+  const homeUrl = useBaseUrl('/');
+  const logoUrl = useBaseUrl('/img/vueladata-logo.png');
+  return <a className={styles.brand} href={homeUrl} aria-label="VuelaData, inicio"><img className={styles.brandLogo} src={logoUrl} alt="VuelaData" /><span>Vuela<span>Data</span></span></a>;
 }
 
 function Header() {
+  const docsUrl = useBaseUrl('/docs');
   return <header className={styles.header}>
     <Brand/>
     <nav className={styles.navigation} aria-label="Navegación principal">
       <a href="#buscar">Vuelos</a><a href="#destinos">Destinos</a><a href="#informacion">Información</a><a href="#ayuda">Ayuda</a>
     </nav>
-    <div className={styles.headerActions}><button className={styles.language} type="button" aria-label="Idioma">◎ ES⌄</button><a className={styles.login} href="/docs">Ver documentación</a></div>
+    <div className={styles.headerActions}><button className={styles.language} type="button" aria-label="Idioma">◎ ES⌄</button><a className={styles.login} href={docsUrl}>Ver documentación</a></div>
   </header>;
 }
 
