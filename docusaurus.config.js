@@ -7,10 +7,12 @@ const config = {
   tagline: 'Tu viaje, mejor informado',
   favicon: 'img/favicon.ico',
   future: {v4: true},
-  url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
-  organizationName: 'your-organization',
-  projectName: 'vueladata',
+
+  url: 'https://lluyss123.github.io',
+  baseUrl: '/documentacion-vueladata/',
+
+  organizationName: 'lLuyss123',
+  projectName: 'documentacion-vueladata',
   onBrokenLinks: 'throw',
   i18n: {defaultLocale: 'es', locales: ['es']},
   presets: [
